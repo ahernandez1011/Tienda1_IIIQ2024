@@ -1,0 +1,30 @@
+/* Selector de ID */
+#tituloPrincipal {
+    color: #9213e8;
+    font-size: 50px;   
+}
+
+.parrafoNegrita{
+    font-weight:bold;
+    color:darkgreen;
+}
+
+.parrafoEspecial {
+    font-family: Comic Sans MS;
+}
+
+.prioridad{
+    color: red;
+}
+
+.prioridad2{
+    color: purple;
+}
+
+.prioridad1{
+    color: red;
+}
+
+p{
+    word-spacing: 8px;
+}
