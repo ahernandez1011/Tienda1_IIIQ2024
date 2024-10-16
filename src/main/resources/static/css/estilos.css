@@ -53,10 +53,9 @@ a:link {
    background-color: aquamarine;
    border: 2px solid aquamarine;
    margin: 10px;
-  
    
-   border-radius: 25px;
    
+   border-radius: 25px; 
 }
 
 a:visited {
