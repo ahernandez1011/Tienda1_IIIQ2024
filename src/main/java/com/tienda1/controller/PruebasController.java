@@ -93,4 +93,16 @@ public class PruebasController {
         return "/pruebas/listado2";
     }
 
+    @PostMapping("/consultaDisponibilidad")
+    public String consultaDisponibilidad(@RequestParam(value = "activo") boolean activo,
+            @RequestParam(value = "existenciasMinimas") int existenciasMinimas,
+            Model model) {
+        List<Producto> productos = productoService.buscarPorDisponibilidadYEstado(activo, existenciasMinimas);
+        model.addAttribute("productos", productos);
+        model.addAttribute("totalProductos", productos.size());
+        model.addAttribute("activo", activo);
+        model.addAttribute("existenciasMinimas", existenciasMinimas);
+        return "/pruebas/listado2"; // Asegúrate de que esta vista esté configurada
+    }
+    
 }

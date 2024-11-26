@@ -179,6 +179,27 @@
                 </div>
                 <div class="col-md-3"></div>
             </div>
+            <div class="row py-2">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <form method="POST" th:action="@{/pruebas/consultaDisponibilidad}">
+                        <div class="mb-3">
+                            <label for="activo">Estado Activo</label>
+                            <select name="activo" class="form-select">
+                                <option value="true">Activos</option>
+                                <option value="false">Inactivos</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="existenciasMinimas">Existencias Mínimas</label>
+                            <input type="number" class="form-control" 
+                                   name="existenciasMinimas" required="true"/>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>  
+              </div>
+              <div class="col-md-3"></div>
+              </div>
         </section> 
     </body>
 </html>

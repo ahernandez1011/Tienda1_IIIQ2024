@@ -68,5 +68,10 @@ public class ProductoServiceImpl implements ProductoService {
     public List<Producto> buscarPorNombre(String nombre) {
        return productoDao.findByDescripcionContainingOrderByPrecio(nombre);
     }
-
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> buscarPorDisponibilidadYEstado(boolean activo, int existenciasMinimas) {
+        return productoDao.findByActivoAndExistenciasGreaterThan(activo, existenciasMinimas);
+    }
+    
 }

@@ -21,4 +21,5 @@ public interface ProductoDao extends JpaRepository<Producto, Long> {
     
     public List<Producto> findByDescripcionContainingOrderByPrecio(String descripcion);
     
+    public List<Producto> findByActivoAndExistenciasGreaterThan(boolean activo, int existenciasMinimas);
 }
